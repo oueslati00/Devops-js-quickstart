@@ -1,10 +1,10 @@
 # Devops-js-quickstart
 quickstart project for javascript application with docker 
 
-/www : folder for using nginx server
-    /certs : folder for more secure the access by generating key using mkcert
-/api : backend project with NestJs 
-/app : Empty react Project
+- /www : folder for using nginx server
+   - /certs : folder for more secure the access by generating key using mkcert
+ - /api : backend project with NestJs 
+- /app : Empty react Project
 
 Note :  bitbucket-pipelines.yml file to apply some command with bitbucket 
 
