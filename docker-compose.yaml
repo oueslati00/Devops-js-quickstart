@@ -10,18 +10,19 @@ services:
   api:
     build:
       context: api
-    container_name: deliverooapi
+    container_name: deliveroo-api
     volumes: ["./api/src:/src/src"]
     networks: ["deliveroo"]
   
   app:
     build:
       context: app
-    container_name: deliverooapp
+    container_name: deliveroo-app
     networks: ["deliveroo"]
 
   www:
     build:
       context: www
-    container_name: deliveroowww
+    container_name: deliveroo-www
     networks: ["deliveroo"]
+    ports: ["443:443"]
