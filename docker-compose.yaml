@@ -1,0 +1,27 @@
+version: "3.8"
+
+networks:
+  deliveroo: null
+
+volumes:
+  postgress: null
+
+services:
+  api:
+    build:
+      context: api
+    container_name: deliverooapi
+    volumes: ["./api/src:/src/src"]
+    networks: ["deliveroo"]
+  
+  app:
+    build:
+      context: app
+    container_name: deliverooapp
+    networks: ["deliveroo"]
+
+  www:
+    build:
+      context: www
+    container_name: deliveroowww
+    networks: ["deliveroo"]
