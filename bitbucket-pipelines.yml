@@ -1,0 +1,11 @@
+pipelines:
+  default:
+    - step:
+        name: Test and build
+        image: node:14
+        script:
+          - cd api
+          - npm install
+          - run lint
+          - npm run test
+          - npm run build
