@@ -18,6 +18,8 @@ services:
     build:
       context: app
     container_name: deliveroo-app
+    volumes: 
+      - "./app/src:/src/src"
     networks: ["deliveroo"]
 
   www:
